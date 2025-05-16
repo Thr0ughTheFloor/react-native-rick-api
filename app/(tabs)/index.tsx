@@ -1,11 +1,20 @@
-import { StyleSheet, Text } from "react-native";
+import { StyleSheet, Text, View, ScrollView } from "react-native";
+import { Header } from "@/components/headerIcon";
+import { MenuLayout } from "@/components/menuLayout";
 export default function HomeScreen() {
   
   return (
 
     <>
       <Text>INDEX DAS TABS</Text>
-      {}
+      <ScrollView>
+      <Header image={require("../../assets/images/rick-logo.png")}/>
+      <View style={styles.menuConteiner}>
+      <MenuLayout/>
+      </View>
+      </ScrollView>
+      
+      
     </>
   );
 }
@@ -27,4 +36,8 @@ const styles = StyleSheet.create({
     left: 0,
     position: "absolute",
   },
+  menuConteiner:{
+    alignItems: 'center',
+    marginTop: 50,
+  }
 });
